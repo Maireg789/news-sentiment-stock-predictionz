@@ -17,6 +17,12 @@ This project analyzes the correlation between financial news sentiment and stock
 *   **Technical Analysis:** `TA-Lib` for calculating SMA, RSI, and MACD indicators.
 *   **Sentiment Analysis:** `TextBlob` to quantify headline polarity (-1 to +1).
 *   **Visualization:** `Matplotlib` and `Seaborn` for automated plotting.
+### 📈 Financial Metrics (PyNance Integration)
+To assess risk and return profiles, we implemented financial metrics logic (mirroring the `PyNance` library structure) directly into the analysis pipeline:
+*   **Daily Returns:** Calculated percentage change to measure day-to-day performance.
+*   **Cumulative Returns:** Tracked total asset growth over the analysis period.
+*   **Volatility:** Computed annualized rolling standard deviation to quantify risk. 
+*   *Note: Native Pandas implementation was used instead of the raw `pynance` package to ensure compatibility with Python 3.13 environments.*
 
 ### 📊 Data Pipeline
 1.  **Ingestion:** Loaded raw analyst ratings and filtered for the top 20 tickers by frequency.
